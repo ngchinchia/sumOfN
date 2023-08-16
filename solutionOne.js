@@ -11,13 +11,19 @@ console.log(sum_to_n_a(5))
 
 //Implementation 2 : While Loop
 var sum_to_n_b = function(n) {
-    let sumOfN = 0;
-    let i = 1; 
-    while (i <= n){
-        sumOfN = sumOfN + i;
-        i++;
+    // let sumOfN = 0;
+    // let i = 1; 
+    // while (i <= n){
+    //     sumOfN = sumOfN + i;
+    //     i++;
+    // }
+    // return sumOfN; 
+
+    if(n == 1) {
+        return n
     }
-    return sumOfN; 
+
+    return n + sum_to_n_b(n-1)
  };
  
  console.log(sum_to_n_b(5))
